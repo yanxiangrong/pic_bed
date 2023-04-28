@@ -18,7 +18,8 @@ def track(request:WSGIRequest, name):
         trace.ip = x_forwarded_for.split(',')[0]
     else:
         trace.ip = request.META.get('REMOTE_ADDR')
-    try:
+    trace.useragent = request.headers.get('User-Agent')
+    trace.referer = request.headers.get('Referer')
 
 
 def handle_uploaded_file(f) -> str:

@@ -14,7 +14,7 @@ class SaveImage(models.Model):
 
 
 class VisitTrace(models.Model):
-    name = models.CharField(max_length=255, primary_key=True)
+    name = models.CharField(max_length=255)
     ip = models.CharField(max_length=255)
     useragent = models.CharField(max_length=255)
     referer = models.CharField(max_length=255)
