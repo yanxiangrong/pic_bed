@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="container-sm mt-3">
+        <div class="input-group mb-2">
+            <img class="img-thumbnail col-lg-6" src="{{ file }}" alt="{{ name }}">
+        </div>
+        <div class="input-group mb-2">
+            <span>创建时间: {{ create }}</span>
+        </div>
+        <div class="input-group mb-2">
+            <span>最后访问时间: {{ read }}</span>
+        </div>
+        <div class="input-group mb-2">
+            <span>访问次数: {{ count }}</span>
+        </div>
+        <label class="input-group mb-2">
+            <span class="info-label input-group-text ">图片信息链接</span>
+            <input class="form-control" type="text" value="{{ info }}" data-focus="select-all" readonly>
+        </label>
+        <label class="input-group mb-2">
+            <span class="info-label input-group-text">图片URL链接</span>
+            <input class="form-control" type="text" value="{{ file }}" data-focus="select-all" readonly>
+        </label>
+        <label class="input-group mb-2">
+            <span class="info-label input-group-text">HTML</span>
+            <input class="form-control" type="text" value="{{ html }}" data-focus="select-all" readonly>
+        </label>
+        <label class="input-group mb-2">
+            <span class="info-label input-group-text">BBCode</span>
+            <input class="form-control" type="text" value="{{ bbcode }}" data-focus="select-all" readonly>
+        </label>
+        <label class="input-group mb-5">
+            <span class="info-label input-group-text">Markdown</span>
+            <input class="form-control" type="text" value="{{ markdown }}" data-focus="select-all" readonly>
+        </label>
+    </div>
+{% endblock %}
